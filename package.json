@@ -3,7 +3,8 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "start": "next start"
+    "start": "next start",
+    "dev:4000": "next dev -p 4000"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.4",
