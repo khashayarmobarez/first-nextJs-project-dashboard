@@ -8,7 +8,7 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 
 ### chapter 1/3: Optimizing Fonts and Images:
 
-Adding a primary font: 
+Adding a primary font:  
     `export const lusitana = Lusitana({
     weight: ['400', '700'],
     subsets: ['latin'],
