@@ -1,5 +1,5 @@
 export default function Page() {
     return (
-        <p>dashboard page</p>
+        <div>invoices page</div>
     );
 }
