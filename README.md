@@ -109,4 +109,4 @@ export default function NavLinks() {
 2- Create a Vercel account
 3- Connect and deploy your project
 4- Create a Postgres database(serverless sql)
-5- 
+5- Seed your database /app/seed
