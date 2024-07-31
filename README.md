@@ -103,3 +103,10 @@ export default function NavLinks() {
 
 
 ## chapter 1/6: Setting Up Your Database(PostgreSQL):
+
+### steps
+1- push your repository to Github
+2- Create a Vercel account
+3- Connect and deploy your project
+4- Create a Postgres database(serverless sql)
+5- 
