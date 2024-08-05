@@ -110,3 +110,19 @@ export default function NavLinks() {
 3- Connect and deploy your project
 4- Create a Postgres database(serverless sql)
 5- Seed your database /app/seed
+
+
+## chapter 1/7: Fetching data:
+
+### In Next.js, you can create API endpoints using Route Handlers.
+
+### Using Server Components to fetch data
+By default, Next.js applications use React Server Components.
+
+Server Components support promises, providing a simpler solution for asynchronous tasks like data fetching. You can use async/await syntax without reaching out for useEffect, useState or data fetching libraries.
+Server Components execute on the server, so you can keep expensive data fetches and logic on the server and only send the result to the client.
+As mentioned before, since Server Components execute on the server, you can query the database directly without an additional API layer.
+
+### Using SQL
+
+### What are request waterfalls?
