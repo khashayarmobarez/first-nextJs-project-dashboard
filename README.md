@@ -182,3 +182,6 @@ So far, you're streaming a whole page. But you can also be more granular and str
   </Suspense>
   `
 
+
+  <!-- finsihed until partial rendering, chapter 10 -->
+
