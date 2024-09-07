@@ -218,3 +218,7 @@ export const experimental_ppr = true;
 `
 
 That's it. You may not see a difference in your application in development, but you should notice a performance improvement in production. Next.js will prerender the static parts of your route and defer the dynamic parts until the user requests them.
+
+## chapter 1/11: Adding Search and Pagination
+use the Next.js APIs: useSearchParams, usePathname, and useRouter.
+Implement search and pagination using URL search params.
