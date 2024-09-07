@@ -199,8 +199,7 @@ Implementing:
 
 - Enable PPR for your Next.js app by adding the ppr option to your next.config.mjs file:
 
-`
-/** @type {import('next').NextConfig} */
+`/** @type {import('next').NextConfig} */
  
 const nextConfig = {
   experimental: {
@@ -208,8 +207,8 @@ const nextConfig = {
   },
 };
  
-export default nextConfig;
-`
+export default nextConfig;`
+
 
 The 'incremental' value allows you to adopt PPR for specific routes.
 
