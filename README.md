@@ -222,3 +222,6 @@ That's it. You may not see a difference in your application in development, but 
 ## chapter 1/11: Adding Search and Pagination
 use the Next.js APIs: useSearchParams, usePathname, and useRouter.
 Implement search and pagination using URL search params.
+
+
+<!-- until https://nextjs.org/learn/dashboard-app/adding-search-and-pagination#why-use-url-search-params -->
