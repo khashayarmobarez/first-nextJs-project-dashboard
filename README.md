@@ -143,7 +143,7 @@ In JavaScript, you can use the Promise.all() or Promise.allSettled() functions t
 
 With static rendering, data fetching and rendering happens on the server at build time (when you deploy) or when revalidating data.
 benefits:
-  1-Faster Websites
+  1-Faster Websites 
   2-Reduced Server Load 
   3-SEO
   
@@ -154,4 +154,31 @@ With dynamic rendering, content is rendered on the server for each user at reque
   2-User-Specific Content  
   3-Request Time Information
 
-<!-- stopped at Simulating a Slow Data Fetch -->
+
+
+
+## chapter 1/9: streaming:
+
+### streaming
+Streaming is a data transfer technique that allows you to break down a route into smaller "chunks" and progressively stream them from the server to the client as they become ready.
+
+### Streaming a whole page with loading.tsx
+
+loading.tsx is a special Next.js file built on top of Suspense, it allows you to create fallback UI to show as a replacement while page content loads.
+this loading page also applies to the child pages of the route that you added the file inside
+
+### Fixing the loading skeleton bug with route groups(overview())
+
+using (overview) makes the files to only apply for the folder(route) that they are apllied to and not their nests
+Route groups allow you to organize files into logical groups without affecting the URL path structure. When you create a new folder using parentheses (), the name won't be included in the URL path. So /dashboard/(overview)/page.tsx becomes /dashboard.
+
+### Streaming a component
+
+So far, you're streaming a whole page. But you can also be more granular and stream specific components using React Suspense.
+
+  `
+  <Suspense fallback={<RevenueChartSkeleton />}>
+    <RevenueChart />
+  </Suspense>
+  `
+
