@@ -183,5 +183,39 @@ So far, you're streaming a whole page. But you can also be more granular and str
   `
 
 
-  <!-- finsihed until partial rendering, chapter 10 -->
+## chapter 1/10: Partial Prerendering(experimental)
 
+In this chapter, let's learn how to combine static rendering, dynamic rendering, and streaming in the same route with Partial Prerendering (PPR).
+
+### What is Partial Prerendering?
+
+Next.js 14 introduced an experimental version of Partial Prerendering – a new rendering model that allows you to combine the benefits of static and dynamic rendering in the same route.
+
+### How does Partial Prerendering work? Implementing Partial Prerendering
+
+Partial Prerendering uses React's Suspense. 
+
+Implementing:
+
+- Enable PPR for your Next.js app by adding the ppr option to your next.config.mjs file:
+
+`
+/** @type {import('next').NextConfig} */
+ 
+const nextConfig = {
+  experimental: {
+    ppr: 'incremental',
+  },
+};
+ 
+export default nextConfig;
+`
+
+The 'incremental' value allows you to adopt PPR for specific routes.
+
+- Next, add the experimental_ppr segment config option to your dashboard layout:
+`
+export const experimental_ppr = true;
+`
+
+That's it. You may not see a difference in your application in development, but you should notice a performance improvement in production. Next.js will prerender the static parts of your route and defer the dynamic parts until the user requests them.
