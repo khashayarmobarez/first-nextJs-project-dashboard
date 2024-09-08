@@ -224,4 +224,30 @@ use the Next.js APIs: useSearchParams, usePathname, and useRouter.
 Implement search and pagination using URL search params.
 
 
-<!-- until https://nextjs.org/learn/dashboard-app/adding-search-and-pagination#why-use-url-search-params -->
+### Adding the search functionality
+These are the Next.js client hooks that you'll use to implement the search functionality
+
+1- Capture the user's input
+2- Update the URL with the search params
+
+`
+const searchParams = useSearchParams();
+const params = new URLSearchParams(searchParams);
+const pathname = usePathname();
+const { replace } = useRouter();
+replace(`${pathname}?${params.toString()}`);
+`
+
+3- Keeping the URL and input in sync
+`
+<input
+  className="peer block w-full rounded-md border border-gray-200 py-[9px] pl-10 text-sm outline-2 placeholder:text-gray-500"
+  placeholder={placeholder}
+  onChange={(e) => {
+    handleSearch(e.target.value);
+  }}
+  defaultValue={searchParams.get('query')?.toString()}
+/>
+`
+
+4- Updating the table
