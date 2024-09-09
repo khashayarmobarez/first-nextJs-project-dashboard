@@ -289,3 +289,16 @@ const handleSearch = useDebouncedCallback((term) => {
   replace(`${pathname}?${params.toString()}`);
 }, 300);
 `
+
+### need to read pagination section again
+
+
+## chapter 1/12: Mutating Data
+-What React Server Actions are and how to use them to mutate data.
+-How to work with forms and Server Components.
+-Best practices for working with the native formData object, including type validation.
+-How to revalidate the client cache using the revalidatePath API.
+-How to create dynamic route segments with specific IDs.
+
+### What are Server Actions?  
+React Server Actions allow you to run asynchronous code directly on the server. They eliminate the need to create API endpoints to mutate your data. Instead, you write asynchronous functions that execute on the server and can be invoked from your Client or Server Components.
