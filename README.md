@@ -251,3 +251,41 @@ replace(`${pathname}?${params.toString()}`);
 `
 
 4- Updating the table
+
+### tip:
+When to use the useSearchParams() hook vs. the searchParams prop?
+
+You might have noticed you used two different ways to extract search params. Whether you use one or the other depends on whether you're working on the client or the server.
+
+<Search> is a Client Component, so you used the useSearchParams() hook to access the params from the client.
+<Table> is a Server Component that fetches its own data, so you can pass the searchParams prop from the page to the component.
+As a general rule, if you want to read the params from the client, use the useSearchParams() hook as this avoids having to go back to the server.
+
+
+
+### Best practice: Debouncing:
+Debouncing is a programming practice that limits the rate at which a function can fire. In our case, you only want to query the database when the user has stopped typing.
+
+How Debouncing Works:
+
+1.Trigger Event: When an event that should be debounced (like a keystroke in the search box) occurs, a timer starts.
+2.Wait: If a new event occurs before the timer expires, the timer is reset.
+3.Execution: If the timer reaches the end of its countdown, the debounced function is executed.
+
+You can implement debouncing in a few ways, including manually creating your own debounce function. To keep things simple, we'll use a library called 'use-debounce' .
+
+`pnpm i use-debounce`
+
+`
+const handleSearch = useDebouncedCallback((term) => {
+  console.log(`Searching... ${term}`);
+ 
+  const params = new URLSearchParams(searchParams);
+  if (term) {
+    params.set('query', term);
+  } else {
+    params.delete('query');
+  }
+  replace(`${pathname}?${params.toString()}`);
+}, 300);
+`
