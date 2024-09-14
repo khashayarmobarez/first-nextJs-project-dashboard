@@ -292,7 +292,7 @@ const handleSearch = useDebouncedCallback((term) => {
 
 ### need to read pagination section again
 
-
+  
 ## chapter 1/12: Mutating Data
 -What React Server Actions are and how to use them to mutate data.
 -How to work with forms and Server Components.
