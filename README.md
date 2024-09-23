@@ -302,3 +302,17 @@ const handleSearch = useDebouncedCallback((term) => {
 
 ### What are Server Actions?  
 React Server Actions allow you to run asynchronous code directly on the server. They eliminate the need to create API endpoints to mutate your data. Instead, you write asynchronous functions that execute on the server and can be invoked from your Client or Server Components.
+
+### Great, now let's create a Server Action that is going to be called when the form is submitted.
+
+`'use server';`
+
+By adding the 'use server', you mark all the exported functions within the file as Server Actions. These server functions can then be imported and used in Client and Server components.
+
+You can also write Server Actions directly inside Server Components by adding "use server" inside the action. But for this course, we'll keep them all organized in a separate file.
+
+`
+'use server';
+ 
+export async function createInvoice(formData: FormData) {}
+`
