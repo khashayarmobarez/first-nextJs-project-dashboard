@@ -1,28 +1,19 @@
-// Enough is enough!
-// Alice and Bob were on a holiday. Both of them took many pictures of the places they've been, and now they want to show Charlie their entire collection. However, Charlie doesn't like these sessions, since the motif usually repeats. He isn't fond of seeing the Eiffel tower 40 times.
-// He tells them that he will only sit for the session if they show the same motif at most N times. Luckily, Alice and Bob are able to encode the motif as a number. Can you help them to remove numbers such that their list contains each number only up to N times, without changing the order?
+// Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
 
-// Task
-// Given a list and a number, create a new list that contains each number of list at most N times, without reordering.
-// For example if the input number is 2, and the input list is [1,2,3,1,2,1,2,3], you take [1,2,3,1,2], drop the next [1,2] since this would lead to 1 and 2 being in the result 3 times, and then take 3, which leads to [1,2,3,1,2,3].
-// With list [20,37,20,21] and number 1, the result would be [20,37,21].
+// It should remove all values from list a, which are present in list b keeping their order.
 
+// arrayDiff([1,2],[1]) == [2]
+// If a value is present in b, all of its occurrences must be removed from the other:
 
-// In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
-
-// Examples
-// makeNegative(1);    // return -1
-// makeNegative(-5);   // return -5
-// makeNegative(0);    // return 0
-// makeNegative(0.12); // return -0.12
-// Notes
-// The number can be negative already, in which case no change is required.
-// Zero (0) is not checked for any specific sign. Negative zeros make no mathematical sense.
+// arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
 
-function makeNegative(num) {
-  // Code?
-  return num >= 0 ?  num * -1 :  num
+function arrayDiff(a, b) {
+
+  let result = [...a]
+
+  b.map(num => result.filter(numb => numb === num))
+  
 }
 
 
