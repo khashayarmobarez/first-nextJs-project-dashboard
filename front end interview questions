@@ -1,0 +1,65 @@
+Here’s a broader set of questions often asked in front-end interviews focused on HTML. I'll group them by topic to help you organize your prep!
+
+### **Core HTML Structure and Semantics**
+1. **Explain the differences between block-level and inline elements.** When should each type be used?
+2. **What is the difference between `<section>` and `<div>`?** In what scenarios would you prefer one over the other?
+3. **Describe the purpose of the `<main>`, `<header>`, `<footer>`, `<aside>`, and `<nav>` elements.** How do they contribute to semantic HTML?
+4. **What is the difference between `id` and `class` attributes?** Why is it generally recommended to use `class` over `id` in CSS selectors?
+
+### **Forms and Input Types**
+5. **Describe the purpose of the `for` attribute in a `<label>` element.** Why is it important for accessibility?
+6. **How do you handle required fields in forms?** Describe both HTML attributes and JavaScript options.
+7. **What are some common `<input>` types in HTML5?** Why might you choose `type="email"` or `type="date"` over a standard `<input type="text">`?
+8. **How would you implement custom form validation using JavaScript?** Can you give an example?
+
+### **Document Structure and Metadata**
+9. **Explain the role of the `<head>` element and its typical content.** Why is it important?
+10. **What does the `<!DOCTYPE html>` declaration do?** How does it impact rendering?
+11. **What’s the difference between `<meta charset="UTF-8">` and `<meta charset="ISO-8859-1">`?** When would you change the character encoding?
+12. **How do `<title>`, `<meta description>`, and `<meta keywords>` tags affect SEO?** Are `meta keywords` still relevant?
+
+### **Accessibility (a11y) and ARIA**
+13. **What are ARIA roles, and why are they important?** Can you name a few commonly used roles?
+14. **How do `tabindex` and `role` attributes help with keyboard navigation and accessibility?** When would you use `tabindex="-1"`?
+15. **What is the purpose of `aria-live` attributes?** How can it help improve the experience for screen reader users?
+16. **How can you visually hide content from users but still make it accessible to screen readers?** Describe any CSS techniques.
+
+### **HTML5 Features and APIs**
+17. **Describe the `<canvas>` element and its use cases.** How does it differ from using an `<img>` tag?
+18. **What are some common uses of `localStorage` and `sessionStorage`?** How would you clear items from `localStorage`?
+19. **Explain the `data-*` attribute.** How is it useful in HTML5 for dynamic content?
+20. **How does the `contenteditable` attribute work?** When would you use it?
+
+### **Performance Optimization**
+21. **What is lazy loading, and why is it useful?** How would you implement it in an HTML document?
+22. **What are some ways to reduce HTML file size?** Why is minimizing HTML important for page performance?
+23. **How do you prioritize loading content and scripts for faster rendering?** When would you use `async` vs. `defer`?
+24. **Explain the concept of critical rendering path in web development.** What techniques help reduce time to first render?
+
+### **Responsive Design and Media**
+25. **How does `srcset` work with `<img>` tags?** Why is it useful for responsive images?
+26. **What is the purpose of the `viewport` meta tag?** How does it impact mobile layouts?
+27. **Describe how to make a flexible, responsive layout using HTML and CSS.** What are some best practices for mobile-first design?
+28. **Explain what `picture` and `source` elements do.** How would you use them to provide different image formats?
+
+### **Forms of Markup**
+29. **What’s the difference between inline SVGs and image files for icons?** What are the advantages and disadvantages of using SVG for icons?
+30. **Explain the purpose of the `<template>` element.** How might you use it in a dynamic web application?
+31. **What is the `<dialog>` element?** How does it compare to traditional modal implementations?
+
+### **Progressive Enhancement and Fallbacks**
+32. **What is progressive enhancement?** How does it affect your approach to writing HTML and CSS?
+33. **Why is it important to consider fallbacks for older browsers?** Can you give an example of a feature that might need a fallback?
+34. **What is graceful degradation?** How does it differ from progressive enhancement?
+
+### **Security and Best Practices**
+35. **What is Cross-Site Scripting (XSS)?** How can HTML elements be used to prevent XSS?
+36. **How do you prevent form data from being sent when a user submits an incomplete form?** Discuss both HTML and JavaScript techniques.
+37. **What is Content Security Policy (CSP)?** How does it improve security for HTML content?
+
+### **Additional General Questions**
+38. **Describe the difference between HTML and XHTML.** What benefits or limitations does XHTML have?
+39. **What are the rules around the nesting of elements in HTML?** Can you give an example of improper nesting?
+40. **What are some best practices for naming HTML classes and IDs?** Why is consistency in naming important?
+
+Let me know if you’d like to work through any specific ones or if you’d like more detailed examples!
