@@ -36,3 +36,17 @@ function arrayDiff(a, b) {
 
 var result = solution("apples, pears # and bananas\ngrapes\nbananas !apples", ["#", "!"])
 // result should == "apples, pears\ngrapes\nbananas"
+
+function solution(text, markers) {
+  // TODO
+  // TODO
+  text.split('\n').map(line => {
+      for(const marker of markers) {
+        if(line.includes(marker)) {
+          line = line.split(marker)[0]
+        }
+      }
+    return line.trim()
+    }
+  ).join('\n')
+}
