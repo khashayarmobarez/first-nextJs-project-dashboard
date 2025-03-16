@@ -1,52 +1,7 @@
-// Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+// Implement a function that receives two IPv4 addresses, and returns the number of addresses between them (including the first one, excluding the last one).
 
-// It should remove all values from list a, which are present in list b keeping their order.
+// All inputs will be valid IPv4 addresses in the form of strings. The last address will always be greater than the first one.
 
-// arrayDiff([1,2],[1]) == [2]
-// If a value is present in b, all of its occurrences must be removed from the other:
-
-// arrayDiff([1,2,2,2,3],[2]) == [1,3]
-
-
-function arrayDiff(a, b) {
-
-  let result = [...a]
-
-  b.map(num => result.filter(numb => numb === num))
-  
-}
-
-
-
-// Complete the solution so that it strips all text that follows any of a set of comment markers passed in. Any whitespace at the end of the line should also be stripped out.
-
-// Example:
-
-// Given an input string of:
-
-// apples, pears # and bananas
-// grapes
-// bananas !apples
-// The output expected would be:
-
-// apples, pears
-// grapes
-// bananas
-// The code would be called like so:
-
-var result = solution("apples, pears # and bananas\ngrapes\nbananas !apples", ["#", "!"])
-// result should == "apples, pears\ngrapes\nbananas"
-
-function solution(text, markers) {
-  // TODO
-  // TODO
-  text.split('\n').map(line => {
-      for(const marker of markers) {
-        if(line.includes(marker)) {
-          line = line.split(marker)[0]
-        }
-      }
-    return line.trim()
-    }
-  ).join('\n')
-}
+* With input "10.0.0.0", "10.0.0.50"  => return   50 
+* With input "10.0.0.0", "10.0.1.0"   => return  256 
+* With input "20.0.0.10", "20.0.1.0"  => return  246
